@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page | Baked Roots</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_leaf.ico" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Read from a host of articles about gardening and/or farming."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Baked Roots, gardening, farming, sustainability, food safety, environmental footprint, 
+      soil, Negative effects, chemical pesticides, fertilisers, Africa, blog"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <!-- Hamburger Icon for Small Screens -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="grow.html">GROW</a></li>
+          <li class="logo-container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">BAKED ROOTS</span>
+              <img src="images/leaf-img.svg" alt="Leaf" class="logo-leaf" />
+            </a>
+          </li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="blog-page-main-content">
+      <!-- Main Blog -->
+      <article class="featured-blog">
+        <figure class="featured-blog-image">
+          <img
+            src="images/main-blog-img.jpg"
+            alt="Tractor spraying water on field"
+          />
+        </figure>
+        <div class="featured-text">
+          <h1 class="main-heading" id="home-page-heading">
+            The Negative Effects of Chemical Pesticides and Fertilisers in
+            Africa
+          </h1>
+          <p>
+            The widespread use and convenience of chemical fertilisers and
+            pesticides have caused these products to be misused, resulting in
+            various health conditions.
+          </p>
+          <a
+            href="https://ohsonline.com/articles/2017/12/07/the-hidden-dangers-of-chemical-fertilizers.aspx"
+            class="cta-button"
+            aria-label="Read More"
+            role="button"
+            target="_blank"
+          >
+            Read
+          </a>
+          <br />
+          <a href="#" aria-label="More" role="button" id="more-blogs-link"
+            >More</a
+          ><br />
+        </div>
+
+        <!-- Screen Reader Button -->
+        <div class="screen-reader-toggle-container">
+          <button id="screen-reader-toggle-btn">Page Reader</button>
+        </div>
+      </article>
+
+      <!-- Side blogs -->
+      <aside class="side-blogs">
+        <article class="side-blog">
+          <figure>
+            <img
+              src="images/top-side-blog-img.jpg"
+              alt="Hand holding soil in a milk carton with a plant"
+            />
+          </figure>
+          <h2>Agricultural pesticide use and misuse</h2>
+          <a
+            href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9810978/"
+            class="cta-button"
+            aria-label="Read More"
+            role="button"
+            target="_blank"
+          >
+            Read
+          </a>
+        </article>
+
+        <article class="side-blog">
+          <figure>
+            <img
+              src="images/bottom-side-blog-img.jpg"
+              alt="Wooden box of fresh produce"
+            />
+          </figure>
+          <h2>Pesticides impacts on human health and the environment</h2>
+          <a
+            href="https://www.sciencedirect.com/science/article/pii/S2405844024051594"
+            class="cta-button"
+            aria-label="Read More"
+            role="button"
+            target="_blank"
+          >
+            Read
+          </a>
+        </article>
+      </aside>
+
+      <!-- Displaying a message if JavaScript is disabled -->
+      <noscript class="no-js-warning">
+        <div>
+          No JavaScript detected. Please enable JavaScript to fully experience
+          the features of this site.
+        </div>
+      </noscript>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        <a href="terms.html">Terms of Use</a> .
+        <a href="privacy.html">Privacy Policy</a><br />
+        &COPY; 2025 Baked Roots
+      </p>
+    </footer>
+
+    <!-- Subscribe Popup -->
+    <div id="subscribe-popup" class="popup-container">
+      <h2>Subscribe</h2>
+      <p>Subscribe to stay updated or cancel to continue browsing.</p>
+      <div class="button-group">
+        <button id="accept-subscribe-btn" class="subscribe-btn" type="button">
+          Subscribe
+        </button>
+        <button id="decline-subscribe-btn" class="subscribe-btn" type="button">
+          Cancel
+        </button>
+      </div>
+    </div>
+
+    <!-- Link to the external JS file -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home Page | Baked Roots</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_leaf.ico" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Baked Roots is dedicated to revolutionizing gardening and farming with a 
+      focus on sustainability and food safety."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Baked Roots, gardening, farming, sustainability, food safety, environmental footprint, 
+      soil"
+    />
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Intro Animation -->
+    <div class="welcome-container" id="welcome" style="display: none">
+      <div class="half-screen left-screen">
+        <!-- Two class names -->
+        <div class="text-slide text-left" id="text-left">Welcome</div>
+      </div>
+      <div class="half-screen right-screen">
+        <div class="text-slide text-right" id="text-right">To</div>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="site-header">
+      <!-- Hamburger Icon for Small Screens -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="grow.html">GROW</a></li>
+          <li class="logo-container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">BAKED ROOTS</span>
+              <img src="images/leaf-img.svg" alt="Leaf" class="logo-leaf" />
+            </a>
+          </li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+      <section class="content-section">
+        <figure class="image-container">
+          <div class="slideshow">
+            <button class="prev" aria-label="Previous slide">&#10094;</button>
+            <img
+              src="images/home-page-img.jpg"
+              alt="Bright red apple lying on the ground"
+              class="slide active"
+            />
+            <img
+              src="images/sappling-in-polution.jpg"
+              alt="Sappling sprouting from ground covered in rubble"
+              class="slide"
+            />
+            <img
+              src="images/community-support.jpg"
+              alt="Community planting sapplings into the ground"
+              class="slide"
+            />
+            <img
+              src="images/drip-irrigation.jpg"
+              alt="Rows of drip irrigation"
+              class="slide"
+            />
+            <img
+              src="images/two-hands.jpg"
+              alt="Two hands coming from the side holding soil with a sappling on top"
+              class="slide"
+            />
+
+            <button class="next" aria-label="Next slide">&#10095;</button>
+          </div>
+        </figure>
+
+        <div class="text-container">
+          <h1 class="main-heading" id="home-page-heading">ROOTED In Purpose</h1>
+          <p class="intro-text">
+            At Baked Roots, we’re dedicated to changing the way you view
+            gardening and farming. Our mission is to help you reap a deeper
+            understanding of your environmental footprint — today and in the
+            years to come. We focus on raising awareness about food safety,
+            urging you to consider every step of the meal preparation journey,
+            starting with something as basic as the choice of soil.
+          </p>
+
+          <a
+            href="grow.html"
+            class="cta-button"
+            aria-label="Go to Grow page"
+            role="button"
+          >
+            Grow Now!
+          </a>
+        </div>
+      </section>
+
+      <!-- Screen Reader Button -->
+      <div class="screen-reader-toggle-container">
+        <button id="screen-reader-toggle-btn">Page Reader</button>
+      </div>
+
+      <!-- Displaying a message if JavaScript is disabled -->
+      <noscript class="no-js-warning">
+        <div>
+          No JavaScript detected. Please enable JavaScript to fully experience
+          the features of this site.
+        </div>
+      </noscript>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        <a href="terms.html">Terms of Use</a> .
+        <a href="privacy.html">Privacy Policy</a><br />
+        &COPY; 2025 Baked Roots
+      </p>
+    </footer>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-popup" class="popup-container">
+      <h2><span>🍪</span> Cookie Consent</h2>
+      <p>
+        To enhance your experience and save your progress, we use cookies on our
+        site. By accepting, you consent to our use of cookies.
+      </p>
+
+      <button id="accept-cookie-btn" class="cookie-btn" type="button">
+        Accept
+      </button>
+    </div>
+
+    <!-- ========================================
+        SLIDESHOW JAVASCRIPT
+    ========================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide");
+        const prevBtn = document.querySelector(".prev");
+        const nextBtn = document.querySelector(".next");
+        let current = 0;
+
+        function showSlide(index) {
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+          });
+        }
+
+        function nextSlide() {
+          current = (current + 1) % slides.length;
+          showSlide(current);
+        }
+
+        function prevSlide() {
+          current = (current - 1 + slides.length) % slides.length;
+          showSlide(current);
+        }
+
+        nextBtn.addEventListener("click", nextSlide);
+        prevBtn.addEventListener("click", prevSlide);
+
+        setInterval(nextSlide, 10000); //was 5000
+      });
+    </script>
+
+    <!-- Link to the external JS file -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

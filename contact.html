@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Page | Baked Roots</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_leaf.ico" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Contact Baked Roots." />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Baked Roots, gardening, farming, sustainability, food safety, environmental footprint, 
+      soil, contact"
+    />
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <!-- Hamburger Icon for Small Screens -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="grow.html">GROW</a></li>
+          <li class="logo-container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">BAKED ROOTS</span>
+              <img src="images/leaf-img.svg" alt="Leaf" class="logo-leaf" />
+            </a>
+          </li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="main-content">
+      <section class="content-section">
+        <figure class="image-container">
+          <img
+            src="images/contact-page-img.jpg"
+            alt="A woman planting a sappling in the ground"
+            title="Baked Roots - Contact Page Image"
+            class="home-page-image"
+          />
+        </figure>
+
+        <div class="text-container">
+          <h1 class="main-heading" id="home-page-heading">Share Your SEED</h1>
+          <p class="intro-text">
+            Tell us about your experience with chemical pesticides, fertilizers,
+            or the change you're making – you might be featured in our next blog
+            post!
+          </p>
+
+          <p>
+            Or email us at
+            <a id="email-link" href="mailto:BakedRoots@gmail.com"
+              >BakedRoots@gmail.com</a
+            >
+          </p>
+
+          <!-- Contact Form Section -->
+          <section id="contact-form" class="contact-form">
+            <form id="contact-form-content">
+              <label for="full-name">Full Name</label>
+              <input
+                type="text"
+                id="full-name"
+                name="full-name"
+                required
+                minlength="2"
+                placeholder="Enter your full name"
+              />
+
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+              />
+
+              <label for="message">Your Story</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                placeholder="Share your gardening story..."
+              ></textarea>
+
+              <button id="contact-form-submit" type="submit" class="submit-btn">
+                Send
+              </button>
+            </form>
+          </section>
+        </div>
+      </section>
+
+      <!-- Screen Reader Button -->
+      <div class="screen-reader-toggle-container">
+        <button id="screen-reader-toggle-btn">Page Reader</button>
+      </div>
+
+      <!-- Displaying a message if JavaScript is disabled -->
+      <noscript class="no-js-warning">
+        <div>
+          No JavaScript detected. Please enable JavaScript to fully experience
+          the features of this site.
+        </div>
+      </noscript>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        <a href="terms.html">Terms of Use</a> .
+        <a href="privacy.html">Privacy Policy</a><br />
+        &COPY; 2025 Baked Roots
+      </p>
+    </footer>
+
+    <!-- ======================================== 
+        CONTACT FORM JAVASCRIPT
+    ========================================== -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form-content");
+
+        contactForm.addEventListener("submit", function (event) {
+          // Check if form is valid and showing errors
+          if (!contactForm.checkValidity()) {
+            return;
+          }
+
+          // Prevent default form submission behavior
+          event.preventDefault();
+
+          // Showing custom success message
+          alert("Your message was submitted!");
+
+          // Resetting the form
+          contactForm.reset();
+        });
+      });
+    </script>
+
+    <!-- Link to the external JS file -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

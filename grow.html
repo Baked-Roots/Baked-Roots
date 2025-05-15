@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grow Page | Baked Roots</title>
+
+    <!-- Favicon Icon -->
+    <link rel="icon" type="image/x-icon" href="images/favicon_leaf.ico" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Grow into your best self. Learn the best agricultural/gardening practices."
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Baked Roots, farming, sustainability, food safety, environmental footprint, soil, 
+      South African, non-profit, apple, apples, apple tree, donated, bakeries, baked goods, schools, shelters"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="site-header">
+      <!-- Hamburger Icon for Small Screens -->
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="grow.html">GROW</a></li>
+          <li class="logo-container">
+            <a href="index.html" class="logo-link">
+              <span class="logo-text">BAKED ROOTS</span>
+              <img src="images/leaf-img.svg" alt="Leaf" class="logo-leaf" />
+            </a>
+          </li>
+          <li><a href="blog.html">BLOG</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="grow-page-main-content">
+      <section class="grow-page-content-section">
+        <div class="grow-page-text-container">
+          <h1 id="grow-page-heading" class="main-heading">GROW Your Story</h1>
+          <div class="grow-page-intro-text">
+            <p>
+              Welcome! I was created by Baked Roots, the South African
+              non-profit organisation. Local community members, like you, grow
+              apple trees, and the apples are donated to bakeries we have
+              partnered with. These bakeries then use the apples to make baked
+              goods for schools, shelters, and those in need—all while promoting
+              sustainability.
+            </p>
+            <p>
+              You will care for a digital apple tree, and while you do, you will
+              learn the best farming practices and make decisions that affect
+              your tree, fruit, soil, and the health of those who ‘eat’ your
+              apples.
+            </p>
+          </div>
+          <div class="button-group">
+            <button id="new-story-btn" class="story-controls-btn" type="button">
+              New Story
+            </button>
+            <button
+              id="continue-story-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Form section -->
+      <section id="story-form" style="display: none">
+        <h1 id="form-heading" class="main-heading">Create Your Profile</h1>
+        <form id="story-form-content">
+          <label for="full-name">Full Name:</label>
+          <input type="text" id="full-name" name="full-name" required />
+          <!-- Control 1: text -->
+
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+          <!-- Control 2: number -->
+
+          <fieldset class="form-fieldset">
+            <legend>Gender:</legend>
+            <div class="radio-options">
+              <!-- Control 3: radio -->
+              <label
+                ><input type="radio" name="gender" value="female" />
+                Female</label
+              >
+              <label
+                ><input type="radio" name="gender" value="male" /> Male</label
+              >
+              <label
+                ><input type="radio" name="gender" value="other" /> Other</label
+              >
+            </div>
+          </fieldset>
+
+          <label for="experience">Experience with Farming/Gardening:</label>
+          <select id="experience" name="experience" required>
+            <!-- Control 4: select -->
+            <option value=""></option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="expert">Expert</option>
+          </select>
+
+          <button type="submit" class="story-controls-btn">Done</button>
+          <!-- Control 5: submit -->
+        </form>
+      </section>
+
+      <!-- Progress Bar -->
+      <div id="growth-tracker" style="display: none">
+        <img id="leaf-icon" src="images/leaf-img.svg" alt="Leaf" />
+        <div id="growth-bar-background">
+          <div id="growth-bar-fill"></div>
+        </div>
+      </div>
+
+      <!-- Story Introduction -->
+      <section
+        id="story-intro-section"
+        style="display: none"
+        class="story-sections"
+      >
+        <div class="grow-page-text-container">
+          <div class="story-text">
+            <h1 id="story-intro-heading" class="main-heading">Beginning</h1>
+
+            <p>
+              [User], you stand in the middle of the aisle of a busy Builders
+              Warehouse, glancing down at your crumpled shopping list that you
+              hastily wrote this morning. However, you can barely decipher the
+              writing, so you check your basket: garden gloves, check; shears,
+              check; hat, check; soil… Oh, how could you forget the most
+              important item? You weave through the trolleys and make your way
+              to the garden section, only to be met with what feels like an
+              endless selection of different soils. You know how crucial this
+              decision is for the future of your apple tree. Which soil will you
+              choose?
+            </p>
+
+            <button id="choice-1-btn" class="story-controls-btn" type="button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choice 1: Soil Selection -->
+      <section
+        id="choice-1-section"
+        class="popup-container"
+        style="display: none"
+      >
+        <div class="story-choices-section">
+          <div class="soil-option">
+            <h2>Loamy Soil</h2>
+            <p>
+              ✅ Advantages: Ideal for most plants, nutrient and mineral rich,
+              and good water retention.
+            </p>
+            <p>
+              ❌ Disadvantage: Prone to erosion, may need fertiliser to maintain
+              fertility.
+            </p>
+          </div>
+
+          <div class="soil-option">
+            <h2>Clay Soil</h2>
+            <p>
+              ✅ Advantages: Low erosion risk, good water retention, and
+              supports roots.
+            </p>
+            <p>
+              ❌ Disadvantage: Hard to work with, can cause waterlogging, root
+              rot and prevent root growth.
+            </p>
+          </div>
+          <div class="button-group">
+            <button
+              id="choice-1-option-loamy-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Loamy Soil
+            </button>
+            <button
+              id="choice-1-option-clay-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Clay Soil
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Scene 2 -->
+      <section
+        id="story-scene-2-section"
+        style="display: none"
+        class="story-sections"
+      >
+        <div class="grow-page-text-container">
+          <figure class="story-image-container">
+            <img
+              src="images/soil-img.jpg"
+              alt="Soil with 4 sapplings growing out of it"
+            />
+          </figure>
+          <div class="story-text">
+            <p id="soil-choice">Story goes here...</p>
+          </div>
+          <div class="button-group">
+            <button id="choice-2-btn" class="story-controls-btn" type="button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choice 2: Fertiliser Selection -->
+      <section
+        id="choice-2-section"
+        class="popup-container"
+        style="display: none"
+      >
+        <div class="story-choices-section">
+          <div class="fertiliser-option">
+            <h2>Organic Fertiliser</h2>
+            <p>
+              ✅ Advantages: Safe for individuals, eco-friendly and boots plant
+              growth.
+            </p>
+            <p>
+              ❌ Disadvantage: Potential pathogens, slow nutrient release and
+              cost and availability.
+            </p>
+          </div>
+
+          <div class="fertiliser-option">
+            <h2>Chemical Fertiliser</h2>
+            <p>✅ Advantages: Readily available and affordable.</p>
+            <p>
+              ❌ Disadvantage: Water pollution, soil degradation, can kill
+              beneficial soil microbes.
+            </p>
+          </div>
+          <div class="button-group">
+            <button
+              id="choice-2-organic-fertiliser-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Organic Fertiliser
+            </button>
+            <button
+              id="choice-2-chemical-fertiliser-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Chemical Fertiliser
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Scene 3 -->
+      <section
+        id="story-scene-3-section"
+        style="display: none"
+        class="story-sections"
+      >
+        <div class="grow-page-text-container">
+          <figure class="story-image-container">
+            <img
+              src="images/fertiliser-img.jpg"
+              alt="A single sappling sprouting from a grow container"
+            />
+          </figure>
+          <div class="story-text">
+            <p id="fertiliser-choice">Story goes here...</p>
+          </div>
+          <div class="button-group">
+            <button id="choice-3-btn" class="story-controls-btn" type="button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choice 3: Irrigation Selection -->
+      <section
+        id="choice-3-section"
+        class="popup-container"
+        style="display: none"
+      >
+        <div class="story-choices-section">
+          <div class="irrigation-option">
+            <h2>Flood Irrigation</h2>
+            <p>✅ Advantages: Low cost, no pump needed, and easy to use.</p>
+            <p>
+              ❌ Disadvantage: High water usage, soil erosion, and potential for
+              waterlogging.
+            </p>
+          </div>
+
+          <div class="irrigation-option">
+            <h2>Drip Irrigation</h2>
+            <p>
+              ✅ Advantages: Lower water usage, even water distribution, and
+              improved plant health.
+            </p>
+            <p>
+              ❌ Disadvantage: Higher costs, could clog, and harder set-up and
+              maintenance.
+            </p>
+          </div>
+          <div class="button-group">
+            <button
+              id="choice-3-flood-irrigation-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Flood Irrigation
+            </button>
+            <button
+              id="choice-3-drip-irrigation-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Drip Irrigation
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Scene 4 -->
+      <section
+        id="story-scene-4-section"
+        style="display: none"
+        class="story-sections"
+      >
+        <div class="grow-page-text-container">
+          <figure class="story-image-container">
+            <img
+              src="images/irrigation-img.jpg"
+              alt="A man walking through a crop field while being watered by sprinklers"
+            />
+          </figure>
+          <div class="story-text">
+            <p id="irrigation-choice">Story goes here...</p>
+          </div>
+          <div class="button-group">
+            <button id="choice-4-btn" class="story-controls-btn" type="button">
+              Continue
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Choice 4: Pesticide Selection -->
+      <section
+        id="choice-4-section"
+        class="popup-container"
+        style="display: none"
+      >
+        <div class="story-choices-section">
+          <div class="pesticide-option">
+            <h2>Chemical Pesticide</h2>
+            <p>✅ Advantages: readily available and affordable.</p>
+            <p>
+              ❌ Disadvantage: water pollution, soil degradation, can kill
+              beneficial soil microbes.
+            </p>
+          </div>
+          <div class="pesticide-option">
+            <h2>Organic Pesticide</h2>
+            <p>
+              ✅ Advantages: safe for individuals, eco-friendly and sustainable,
+              improves overall soil health and boots plant growth and yield.
+            </p>
+            <p>
+              ❌ Disadvantage: potential pathogens, slow nutrient release and
+              cost and availability.
+            </p>
+          </div>
+          <div class="button-group">
+            <button
+              id="choice-4-chemical-pesticide-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Chemical Pesticide
+            </button>
+            <button
+              id="choice-4-organic-pesticide-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Organic Pesticide
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Scene 5 -->
+      <section
+        id="story-scene-5-section"
+        style="display: none"
+        class="story-sections"
+      >
+        <div class="grow-page-text-container">
+          <figure class="story-image-container">
+            <img
+              src="images/pesticide-img.jpg"
+              alt="A person wearing a bee suit surrounded by calm bees"
+            />
+          </figure>
+          <div class="story-text">
+            <p id="pesticide-choice">Story goes here...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ending Scene Animation -->
+      <section id="story-ending-scene-section" class="story-sections">
+        <div class="apples-container" id="apples-container">
+          <div class="apples" id="apple-1">
+            <img src="images/seed-img.png" class="seed" />
+            <img src="images/apple-img.png" class="apple" />
+          </div>
+          <div class="apples" id="apple-2">
+            <img src="images/seed-img.png" class="seed" />
+            <img src="images/apple-img.png" class="apple" />
+          </div>
+          <div class="apples" id="apple-3">
+            <img src="images/seed-img.png" class="seed" />
+            <img src="images/apple-img.png" class="apple" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Ending -->
+      <section id="story-ending-section" class="story-sections">
+        <div class="grow-page-text-container">
+          <div class="story-text">
+            <h1 id="story-ending-heading" class="main-heading">Ending</h1>
+            <p id="story-ending">Your Ending</p>
+          </div>
+          <div class="button-group">
+            <button id="restart-btn" class="story-controls-btn" type="button">
+              Retry
+            </button>
+            <button
+              id="reveal-btn"
+              class="story-controls-btn"
+              type="button"
+              style="display: none"
+            >
+              Answers
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reveal Answers Popup -->
+      <section
+        id="story-reveal-section"
+        style="display: none"
+        class="popup-container"
+      >
+        <div class="story-choices-section">
+          <div class="option-list">
+            <h1 id="reveal-heading" class="main-heading">Correct Answers</h1>
+            <p>✅ Loamy Soil</p>
+            <p>❌ Clay Soil</p>
+            <hr />
+            <p>✅ Organic Fertiliser</p>
+            <p>❌ Chemical Fertiliser</p>
+            <hr />
+            <p>✅ Drip Irrigation</p>
+            <p>❌ Flood Irrigation</p>
+            <hr />
+            <p>✅ Organic Pesticide</p>
+            <p>❌ Chemical Pesticide</p>
+          </div>
+          <label for="rating">Please rate us:</label>
+
+          <div class="checkbox-group">
+            <label class="image-checkbox">
+              <!-- Control 6: checkbox -->
+              <input type="checkbox" name="leaf" value="1" />
+              <img src="images/leaf-img.svg" alt="Leaf Option" />
+            </label>
+
+            <label class="image-checkbox">
+              <input type="checkbox" name="leaf" value="2" />
+              <img src="images/leaf-img.svg" alt="Leaf Option" />
+            </label>
+
+            <label class="image-checkbox">
+              <input type="checkbox" name="leaf" value="3" />
+              <img src="images/leaf-img.svg" alt="Leaf Option" />
+            </label>
+
+            <label class="image-checkbox">
+              <input type="checkbox" name="leaf" value="4" />
+              <img src="images/leaf-img.svg" alt="Leaf Option" />
+            </label>
+
+            <label class="image-checkbox">
+              <input type="checkbox" name="leaf" value="5" />
+              <img src="images/leaf-img.svg" alt="Leaf Option" />
+            </label>
+          </div>
+          <div class="button-group">
+            <button
+              id="close-answers-btn"
+              class="story-controls-btn"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screen Reader Button -->
+      <div class="screen-reader-toggle-container">
+        <button id="screen-reader-toggle-btn">Page Reader</button>
+      </div>
+
+      <!-- Displaying a message if JavaScript is disabled -->
+      <noscript>
+        <div class="no-js-warning">
+          No JavaScript detected. Please enable JavaScript to fully experience
+          the features of this site.
+        </div>
+      </noscript>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+      <p class="footer-text">
+        <a href="terms.html">Terms of Use</a> .
+        <a href="privacy.html">Privacy Policy</a><br />
+        &COPY; 2025 Baked Roots
+      </p>
+    </footer>
+
+    <!-- Link to the external JS file -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
